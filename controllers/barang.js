@@ -56,7 +56,7 @@ module.exports = {
   getCatatanByNomor: async (req, res) => {
     const nomor = req.params.nomor;
     try {
-      const result = await Barang.findOne(
+      const result = await Barang.find(
         { nomor: nomor },
         { _id: 0, nilai: 1 }
       );
